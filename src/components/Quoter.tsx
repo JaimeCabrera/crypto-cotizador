@@ -43,7 +43,7 @@ export const Quoter = ({price}: Props) => {
 };
 const styles = StyleSheet.create({
   result: {
-    padding: 20,
+    padding: 10,
   },
   text: {
     color: '#5d6d7e',
