@@ -72,7 +72,9 @@ const App = () => {
             setFetchApi={setFetchApi}
           />
         </View>
-        <View style={styles.result}>{component}</View>
+        <View style={styles.result}>
+          {Object.keys(quote).length === 0 && component}
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
