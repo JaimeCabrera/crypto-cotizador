@@ -7,15 +7,25 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
+import axios from 'axios';
+
 import {Form} from './src/components/Form';
 import {Header} from './src/components/Header';
-import axios from 'axios';
 import {Quoter} from './src/components/Quoter';
+
+const initialState = {
+  PRICE: '',
+  HIGHDAY: '',
+  LOWDAY: '',
+  CHANGEPCT24HOUR: '',
+  LASTUPDATE: '',
+};
+
 const App = () => {
   const [currency, setSelectedcurrency] = useState<string>('');
   const [cryptoCurrency, setCryptoCurrency] = useState<string>('');
   const [fetchApi, setFetchApi] = useState(false);
-  const [quote, setQuote] = useState({});
+  const [quote, setQuote] = useState(initialState);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -49,7 +59,7 @@ const App = () => {
           <Image
             style={styles.img}
             source={{
-              uri: 'https://uca0a8235991e0c8bc841e5747cf.previews.dropboxusercontent.com/p/thumb/ABd6v4XfsbH7ziGnMTFYTDlXCFdXodTl4D1qtf-wfeMn9pzQX0A0TrmipFnstxM8cA3eK-i061r0oKOQhNWCmSRKb4N8Z6Pst3lOobasu_ht7AgANkxQzr-JtAlR9MxpsUhkmoLH6gqMtEJcy2G40hoN4IWDBponRYQoSiUGoQwvz7eN33pBwj9AC5JfeXuRu-lpbxbL9GBxN6dphKdpAusLMoSHL9XHP-bSG_YVxUROkPQZHaJk670MOXdbJ0lLfM44QlQcT98PR6tNs9XQdsQjAGB3Sa50NjJc2Qsw-tRCJ1OeeVtStOHSKGq-Yue4Rk9Bz0tl457nlGRZylm32Bc3BlkV_6n7-8OJJLa2nH2R-DtlktXmqqoe2GHtcxSo9G5D0hyOsS5xC1B_2KvnHBhj/p.jpeg?size=2048x1536&size_mode=3',
+              uri: 'https://uc0bb0e0acee1d253be48bf8ecc6.previews.dropboxusercontent.com/p/thumb/ABf-C0o1g-fIiHkDU6IDxNqfJFduDp3y8-r1oSd3xdNo0qiqVvafLYep1YYYwVQTbiqq9SF3zW5frE4N8qxwEynd_f53a0iDlW4Ceagx-yHbJKn8elVqcL05BU6iKDpUM1lY_m9njNQMRTKVLrrLuuO5OukVrUK-rRC7QS8flzNee7k1S_gLa_Jn4FjLVHH0KjTHX66GIyNl9klDBGvuZzdhMUdxCQGiJy5kXsNLcZNKPwXDx0X6KZ7_gyP5qNt3VAQcTqNNmypsZQq67YNhn-ojfrppioixHc55RPWd2snX2rryXZ5id0n6BJTTui60CjQudoV4v80GglVx-R0eJzdpTGo-462OrqmfWdVsTPLJGMCiuiHQTxB3qX4zgy5uqgp-oY5eUSrumMchwt4F1q35/p.png?size=2048x1536&size_mode=3',
             }}
           />
         </View>
@@ -72,17 +82,18 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     flex: 1,
-    backgroundColor: '#1A162E',
+    backgroundColor: '#eaeded',
   },
   imgContainer: {
     flexDirection: 'row',
-    opacity: 0.4,
+    opacity: 0.9,
     justifyContent: 'center',
   },
   img: {
     height: 120,
-    flex: 1,
-    marginHorizontal: 16,
+    width: 120,
+    // flex: 1,
+    // marginHorizontal: 16,
   },
   content: {
     marginHorizontal: 16,

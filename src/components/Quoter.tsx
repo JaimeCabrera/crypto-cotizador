@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 interface Props {
   price: InterfaceQuoter;
 }
-interface InterfaceQuoter {
+export interface InterfaceQuoter {
   PRICE: string;
   HIGHDAY: string;
   LOWDAY: string;
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   text: {
-    color: '#157A93',
+    color: '#5d6d7e',
     fontFamily: 'Lato-Regular',
     fontSize: 16,
     marginBottom: 8,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   price: {
-    color: '#06ECFA',
+    color: '#2c3e50',
     fontFamily: 'Lato-Regular',
     marginLeft: 10,
     fontSize: 28,

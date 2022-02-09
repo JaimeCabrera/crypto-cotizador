@@ -54,7 +54,7 @@ export const Form = ({
     <View>
       <Text style={styles.label}>Moneda:</Text>
       <Picker
-        dropdownIconColor="#16839C"
+        dropdownIconColor="#F0B66D"
         selectedValue={currency}
         style={styles.picker}
         onValueChange={value => setSelectedcurrency(value)}>
@@ -66,7 +66,7 @@ export const Form = ({
       </Picker>
       <Text style={styles.label}>Crypto Moneda:</Text>
       <Picker
-        dropdownIconColor="#16839C"
+        dropdownIconColor="#F0B66D"
         style={styles.picker}
         selectedValue={cryptoCurrency}
         onValueChange={crypto => setCryptoCurrency(crypto)}>
@@ -82,8 +82,8 @@ export const Form = ({
         })}
       </Picker>
       <TouchableHighlight
-        activeOpacity={0.8}
-        underlayColor="#45B39D"
+        activeOpacity={0.6}
+        underlayColor="#7B6C55"
         onPress={() => quotePrice()}
         style={styles.btnQuoter}>
         <Text style={styles.textQuoter}>Cotizar</Text>
@@ -91,21 +91,21 @@ export const Form = ({
     </View>
   );
 };
+// dorado F0B66D
 const styles = StyleSheet.create({
   label: {
     fontFamily: 'Lato-Black',
     fontSize: 14,
     marginVertical: 16,
     textTransform: 'uppercase',
-    color: '#0F9CAA', //17384F
+    color: '#5d6d7e', //17384F
   },
   picker: {
-    color: '#16839C',
-    backgroundColor: '#14203A',
-    borderRadius: 14,
+    color: '#85929e',
+    backgroundColor: '#eaeded',
   },
   btnQuoter: {
-    backgroundColor: '#13A1BA',
+    backgroundColor: '#E2B154',
     padding: 12,
     borderRadius: 6,
     fontSize: 18,
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   textQuoter: {
     textAlign: 'center',
-    color: '#1A162E',
+    color: '#233340',
     textTransform: 'uppercase',
     fontFamily: 'Lato-Regular',
     fontWeight: 'bold',
