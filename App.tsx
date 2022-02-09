@@ -11,13 +11,21 @@ import axios from 'axios';
 
 import {Form} from './src/components/Form';
 import {Header} from './src/components/Header';
-import {Quoter} from './src/components/Quoter';
+import {InterfaceQuoter, Quoter} from './src/components/Quoter';
 
 const App = () => {
+  // const InitialState = {
+  //   PRICE: '',
+  //   HIGHDAY: '',
+  //   LOWDAY: '',
+  //   CHANGEPCT24HOUR: '',
+  //   LASTUPDATE: '',
+  // };
+
   const [currency, setSelectedcurrency] = useState<string>('');
   const [cryptoCurrency, setCryptoCurrency] = useState<string>('');
   const [fetchApi, setFetchApi] = useState(false);
-  const [quote, setQuote] = useState({});
+  const [quote, setQuote] = useState<InterfaceQuoter>(Object);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -64,6 +72,7 @@ const App = () => {
             setFetchApi={setFetchApi}
           />
         </View>
+
         <View style={styles.result}>{component}</View>
       </ScrollView>
     </SafeAreaView>
