@@ -59,7 +59,7 @@ const App = () => {
           <Image
             style={styles.img}
             source={{
-              uri: 'https://uc0bb0e0acee1d253be48bf8ecc6.previews.dropboxusercontent.com/p/thumb/ABf-C0o1g-fIiHkDU6IDxNqfJFduDp3y8-r1oSd3xdNo0qiqVvafLYep1YYYwVQTbiqq9SF3zW5frE4N8qxwEynd_f53a0iDlW4Ceagx-yHbJKn8elVqcL05BU6iKDpUM1lY_m9njNQMRTKVLrrLuuO5OukVrUK-rRC7QS8flzNee7k1S_gLa_Jn4FjLVHH0KjTHX66GIyNl9klDBGvuZzdhMUdxCQGiJy5kXsNLcZNKPwXDx0X6KZ7_gyP5qNt3VAQcTqNNmypsZQq67YNhn-ojfrppioixHc55RPWd2snX2rryXZ5id0n6BJTTui60CjQudoV4v80GglVx-R0eJzdpTGo-462OrqmfWdVsTPLJGMCiuiHQTxB3qX4zgy5uqgp-oY5eUSrumMchwt4F1q35/p.png?size=2048x1536&size_mode=3',
+              uri: 'https://uc3a99ddda1c27e0dea6a2fde71a.previews.dropboxusercontent.com/p/thumb/ABcY5JiCWmWtej50ypKd5YH-FuU9MutkewALggbYw3GkibKe6cRi7DwOgD2yKg_kcMTMzpwmq87__zPNdItDGc4IGD1AXujea26BGoglol_4YTzD7yvA5hRmxwiiVMpmkHRwyXRFWNS61Hv1UUisHlUCs19UgUeMYPrkyeVk0Wwn871kIVyVt58IWdbxUL89TlwS5Dlcz3Y3a6Y2DMS4OCEB2wVgPYXlxxSNCiZ9myqCmxv2gZuOiUywyVbvvjeRmNAUz01389hukMq7DQnWNj0ENQYbHqkiSE-_4YutJvZ6CrBm9qO2GQyCL6Pv65Otqe8vq1jIUIUQZ2X1_fvwTrN6kvYC9B3rCnJ3GtSYQGBUtuWt83Gk_hpjA1ZeJevcyVv7wT9SvJ27cwcoXcyvkltP/p.png?size=2048x1536&size_mode=3',
             }}
           />
         </View>
@@ -93,8 +93,7 @@ const styles = StyleSheet.create({
   img: {
     height: 120,
     width: 120,
-    // flex: 1,
-    // marginHorizontal: 16,
+    marginHorizontal: 16,
   },
   content: {
     marginHorizontal: 16,
